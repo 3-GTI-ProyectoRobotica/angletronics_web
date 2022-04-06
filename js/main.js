@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', event => {
     data = {
         // ros connection
         ros: null,
-        rosbridge_address: 'ws://127.0.0.1:9090/',
+        rosbridge_address: 'ws://127.0.0.1:9090/', //   'ws://192.168.0.133:9090/'
         connected: false,
 
         // service information 
