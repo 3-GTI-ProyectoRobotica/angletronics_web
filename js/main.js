@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', event => {
         console.log("Clic en enviar")
 
         data.ros = new ROSLIB.Ros({
-            url: document.getElementById("direccionRobot").value
+            url: 'ws://' + document.getElementById("direccionRobot").value + ':9090/'
         })
         data.ros.on("connection", () => {
             data.connected = true
