@@ -7504,6 +7504,46 @@ textarea.form-control-lg {
 .mt-auto {
   margin-top: auto !important;
 }
+.footer{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.footer img{
+  width: 160px;
+  
+}
+#logoUpvFooter{
+  width: 300px;
+  height: 120px;
+}
+.footer p {
+  
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.textosFooter{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  align-items: center;
+  
+}
+.textosFooter{
+  margin: 0px;
+}
+.textosFooter p{
+  margin: 0px;
+}
+.textosFooter p a{
+  text-decoration: none;
+  color: grey;
+}
+
 
 .me-0 {
   margin-right: 0 !important;
@@ -11562,7 +11602,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/cuidar-el-planeta-reciclando.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11603,6 +11643,12 @@ body {
     font-size: 1.25rem;
   }
 }
+.padding-bottom{
+  padding-bottom: 5rem;
+}
+.padding-right{
+  padding-right: 30px;
+}
 
 .about-section {
   padding-top: 10rem;
@@ -11614,6 +11660,8 @@ body {
 
 .projects-section {
   padding: 10rem 0;
+  padding-bottom: 5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, 	#252440  20%);
 }
 .projects-section .featured-text {
   padding: 2rem;
