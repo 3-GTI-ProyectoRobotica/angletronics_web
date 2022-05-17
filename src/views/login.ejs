@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  
+      <div class="loginbox">
+        <img src="assets/img/logo_tronics.png" alt="" class="avatar">
+        <h1>Iniciar Sesión</h1>
+        <form action="/login" method="post">
+          
+          <input type="text" name="mail" placeholder="usuario@2example.com">
+          <input type="password" name="password" placeholder="contraseña">
+          <input type="submit" value="Entrar">
+        </form>
+        <div class="registro">¿No tienes cuenta? <span class="blue"><a href="registro">Regístrate</span></a> </div>
+        <% if (message.length > 0) { %>
+          <div class="alert alert-danger" style="color: red; font-weight: bold;">
+            <%= message %>
+          </div>
+        <% } %>
+      </div>
+
+</body>
+</html>
