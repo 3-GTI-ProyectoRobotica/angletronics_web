@@ -5,6 +5,10 @@ module.exports = (app, passport) => {
     app.get('/index', (req, res) => {
         res.render('index');
     })
+    app.get('/historial', (req, res) => {
+        res.render('historial');
+    })
+
 
     app.get('/image/ultimo/reciclaje', function(req, res){
         const testFolder = './src/public/assets/fotos_reciclaje/';
