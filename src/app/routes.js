@@ -8,17 +8,71 @@ module.exports = (app, passport) => {
 
     app.get('/image/ultimo/reciclaje', function(req, res){
         const testFolder = './src/public/assets/fotos_reciclaje/';
-        var fs = require('fs')
         var path = require("path");
-
-        fs.readdir(testFolder, (err, files) => {
-            last_img = files[files.length-1]
-            //var img = fs.readFileSync(testFolder+last_img);
-            var absolutePath = path.resolve(testFolder+last_img);
-            res.sendFile(absolutePath);
-          });
+        var absolutePath = path.resolve(testFolder+last_img);
+        res.sendFile(absolutePath);
 
    })
+
+   app.get('/image/reciclaje/verde', function(req, res){
+    const testFolder = './src/public/assets/fotos_reciclaje/';
+    const imagenesFolder = './src/public/assets/fotosPanel/';
+    var fs = require('fs')
+    var path = require("path");
+
+    fs.readdir(testFolder, (err, files) => {
+        last_img = files[files.length-1]
+        color_char = last_img[-5]
+        img = ""
+        if(last_img.includes("verde")){
+            img="verde.png"
+        }else{
+            img="verdebw.png"
+        }
+        var absolutePath = path.resolve(imagenesFolder+img);
+        res.sendFile(absolutePath);
+      });
+    })
+
+    app.get('/image/reciclaje/amarillo', function(req, res){
+        const testFolder = './src/public/assets/fotos_reciclaje/';
+        const imagenesFolder = './src/public/assets/fotosPanel/';
+        var fs = require('fs')
+        var path = require("path");
+    
+        fs.readdir(testFolder, (err, files) => {
+            last_img = files[files.length-1]
+            color_char = last_img[-5]
+            img = ""
+            if(last_img.includes("amarillo")){
+                img="amarillo.png"
+            }else{
+                img="amarillobw.png"
+            }
+            var absolutePath = path.resolve(imagenesFolder+img);
+            res.sendFile(absolutePath);
+          });
+        })
+
+    app.get('/image/reciclaje/azul', function(req, res){
+        const testFolder = './src/public/assets/fotos_reciclaje/';
+        const imagenesFolder = './src/public/assets/fotosPanel/';
+        var fs = require('fs')
+        var path = require("path");
+    
+        fs.readdir(testFolder, (err, files) => {
+            last_img = files[files.length-1]
+            color_char = last_img[-5]
+            img = ""
+            if(last_img.includes("azul")){
+                img="azul.png"
+            }else{
+                img="azulbw.png"
+            }
+            var absolutePath = path.resolve(imagenesFolder+img);
+            res.sendFile(absolutePath);
+            });
+    })
 
     app.post('/login', passport.authenticate('local-login', {
         successRedirect : '/controles',
