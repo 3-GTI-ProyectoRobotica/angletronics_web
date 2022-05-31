@@ -84,7 +84,7 @@ body {
 .columnas{
     height: 90px;
    
-    border-bottom:2px solid;
+    border-bottom:1px solid;
     border-bottom-color: #d1d3d4;
 }
 .columna {
