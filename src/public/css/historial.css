@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(../assets/fotosHistorial/fondoHistorial.png);
+    background: url(../assets/fotosHistorial/fondoHistorial2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
@@ -16,7 +16,7 @@ body {
 .loginbox {
     width: 1120px;
     border: 2px solid #08b0ce;
-    height: 830px;
+    height: 800px;
     opacity: 0.55;
     background: black;
     color: #fff;
