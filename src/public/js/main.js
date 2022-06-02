@@ -96,8 +96,7 @@ document.addEventListener('DOMContentLoaded', event => {
         }, (error) => {
             data.service_busy = false
             console.error(error)
-        })	
-
+        })
     }
 
 

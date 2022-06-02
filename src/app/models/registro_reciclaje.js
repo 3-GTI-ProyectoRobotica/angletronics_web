@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt-nodejs')
 const res = require('express/lib/response')
 const db = require('../controller/database')
 
