@@ -9,7 +9,7 @@ module.exports = class usuario {
         this.nombre = nombre
         this.mail = mail
         this.password = password 
-      }
+    }
   
       save(done){
           db.QueryStatment("INSERT INTO `usuario`(`nombre`, `mail`, `password`)"+
@@ -44,7 +44,7 @@ module.exports = class usuario {
           })
       }
   
-      static GetUserById(id){
+      static GetUserById(id){ 
           db.QueryStatment("Select * from usuario where id = '"+id+"';", function(error,result){
               if(error){
                   console.log(error)
@@ -56,5 +56,5 @@ module.exports = class usuario {
                   }
               }
           })
-      }
+       } 
 }
