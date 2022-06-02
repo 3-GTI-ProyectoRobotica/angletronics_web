@@ -160,18 +160,12 @@ body {
     margin-left: 10px
 }
 
-.pie {
+#grafica_tarta {
     /* (A1) CIRCLE */
-    width: 300px; height: 300px;
-    border-radius: 50%;
-  
-    /* (A2) SEGMENTS */
-    background: conic-gradient(
-      yellow 0deg 45deg,
-      green 45deg 190deg,
-      blue 190deg 360deg
-    );
-  }
+    width: 300px; 
+    height: 300px;
+    background-color: aqua;
+}
 
 h4{
     padding-top: 25px;
