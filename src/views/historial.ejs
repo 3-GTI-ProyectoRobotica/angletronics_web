@@ -17,7 +17,8 @@
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-        <script src="js/historial.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <script type="text/javascript" src="js/historial.js"></script>
     </head>
     <body id="historial">
         <div class="loginbox">
@@ -27,7 +28,7 @@
             </div>
             <div id="container">
                 <div class="column-center">
-                    <div class="pie"></div>
+                    <canvas id="myChart" style="background-color: aqua;height: 100%;"></canvas> 
                 </div>
                 <div class="column-left">
                 <h3>Nº de Reciclajes</h3>
