@@ -1,12 +1,11 @@
+const registro_reciclaje = require('./models/registro_reciclaje')
+
 module.exports = (app, passport) => {
     app.get('/', (req, res) => {
         res.render('index');
     })
     app.get('/index', (req, res) => {
         res.render('index');
-    })
-    app.get('/historial', (req, res) => {
-        res.render('historial');
     })
 
 
@@ -111,6 +110,17 @@ module.exports = (app, passport) => {
         res.render('controles', {
             user : req.user
         });
+    })
+
+    app.get('/historial', isLoggedIn,(req, res) => {
+        
+        registro_reciclaje.GetRegistrosByUserId(req.user.id_usuario, function(error, registros){
+            res.render('historial.ejs', {
+                user : req.user,
+                registros_reciclaje : registros
+            });
+        });
+       
     })
 }
 

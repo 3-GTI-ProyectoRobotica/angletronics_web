@@ -32,71 +32,119 @@
                 </div>
                 <div class="column-left">
                 <h3>Nº de Reciclajes</h3>
-                <h4>X de cartón</h4>
-                <h4>X de vidrio</h4>
-                <h4>X de plástico</h4>
+                <h4 id="contadorPlastico">X de cartón</h4>
+                <h4 id="contadorVidrio">X de vidrio</h4>
+                <h4 id="contadorCarton">X de plástico</h4>
                 </div>
                 <div class="column-right">
                 <h3>Porcentajes</h3>
+               
                 <div class="post-container">                
-                    <div class="post-thumb" style="margin-left: 80px;"><img src="/assets/fotosPanel/azul.png" id="azul2"  /></div>
+                    <div class="post-thumb" style="margin-left: 80px;"><img src="/assets/fotosPanel/amarillo.png" id="azul2"  /></div>
                     <div class="post-content">
                         
-                        <h4 >%</h4></div>
+                        <h4 id="porcentajePlastico">%</h4></div>
                         <div class="post-thumb" style="margin-left: 80px;"><img src="/assets/fotosPanel/verde.png" id="verde2" /></div>
                     <div class="post-content">
                         
-                        <h4>%</h4></div>
-                        <div class="post-thumb" style="margin-left: 80px;"><img src="/assets/fotosPanel/amarillo.png" id="amarillo2" /></div>
+                        <h4 id="porcentajeVidrio">%</h4></div>
+                        <div class="post-thumb" style="margin-left: 80px;"><img src="/assets/fotosPanel/azul.png" id="amarillo2" /></div>
                     <div class="post-content">
                         
-                        <h4>%</h4></div>
+                        <h4 id="porcentajeCarton">%</h4></div>
                 </div>
 
                 </div>
               </div>
-
-
-              <div class="columnas">
-                <div class="columna">
-                    <h3>Imagen</h3>
-                    <img id="camara" src="/assets/fotosHistorial/camara.png" > <br>
-                <img id="camara"  src="/assets/fotosHistorial/camara.png" > <br>
-                <img id="camara"  src="/assets/fotosHistorial/camara.png" >
+                <div class="columnas">
+                    <div class="columna">
+                        <h3>Imagen</h3>
+                        <div id="columnaFotos">
+                            <img id="camara" src="/assets/fotos_reciclaje/" > <br>
+                        </div>
+                     </div>
+                    <div class="columna">
+                    <h3>Fecha</h3>
+                    <div id="columnaFecha"></div>
+                        <!--<h4>25-05-07</h4> -->
                     </div>
-                <div class="columna">
-                <h3>Fecha</h3>
-                <h4>dd/mm/aaaa</h4>
-                <h4>dd/mm/aaaa</h4>
-                <h4>dd/mm/aaaa</h4>
-                </div>
-                <div class="columna">
-                <h3>Hora</h3>
-                <h4>xx:xx</h4>
-                <h4>xx:xx</h4>
-                <h4>xx:xx</h4>
-                </div>
-                
-                <div class="columna">
-                <h3>Clasificación</h3>
-                <img id="azul" src="/assets/fotosPanel/azul.png" > <br>
-                <img id="amarillo"  src="/assets/fotosPanel/amarillo.png"> <br>
-                <img id="verde"  src="/assets/fotosPanel/verde.png">
+                    <div class="columna">
+                        <h3>Hora</h3>
+                        <div id="columnaHora">
+                                <!--  <h4>11:12</h4>-->
+                        </div>
+                        
+                    </div>
+                    <div class="columna">
+                    <h3>Clasificación</h3>
+                    <div id="columnaClasificacion">
+                        <!--<img id="azul" src="/assets/fotosPanel/hola.png" > <br> -->
+                    </div>
                 </div>
               </div>
             
 
         <div class="paginas">
-            <p style="margin-right: 17px;">Página X</p>
+            <p id="numeracionPaginas"style="margin-right: 17px;">Página 1 de X</p>
             <div class="pasar">
-                <img src="/assets/fotosHistorial/pasarPagina2.png" id="detras">
-                <img src="/assets/fotosHistorial/pasarPagina.png" id="adelante">
+                <img id="imgAtras" src="/assets/fotosHistorial/pasarPagina2.png" id="detras">
+                <img id="imgAdelante" src="/assets/fotosHistorial/pasarPagina.png" id="adelante">
                 
             </div>
         </div>
         </div>
-      
+        <%
+        var contador_plastico = 0; 
+        var contador_vidrio = 0;
+        var contador_carton = 0;
+
+        for(var i = 0; i<registros_reciclaje.length;i++){
+            if(registros_reciclaje[i].clasificacion == "verde") contador_vidrio++;
+            if(registros_reciclaje[i].clasificacion == "azul") contador_carton++;
+            if(registros_reciclaje[i].clasificacion == "amarillo") contador_plastico++;
+        }
+
+        var contenedores = [contador_plastico, contador_vidrio,contador_carton]
+        var max = contador_plastico + contador_vidrio + contador_carton;
+
+        var porcentajes = [(contador_plastico/max)*100, (contador_vidrio/max)*100,(contador_carton/max)*100]
+        %>
     </body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+    //código a ejecutar cuando el DOM está listo para recibir acciones
+    crearGrafica(<%- contenedores %>);
+    
+    document.getElementById("contadorPlastico").innerHTML = <%- contenedores[0]%> + " de plástico";
+    document.getElementById("contadorVidrio").innerHTML = <%- contenedores[1]%> + " de vidrio";
+    document.getElementById("contadorCarton").innerHTML = <%- contenedores[2]%> + " de carton";
+    
+    document.getElementById("porcentajePlastico").innerHTML = <%- porcentajes[0].toFixed(2)%> + " %";
+    document.getElementById("porcentajeVidrio").innerHTML = <%- porcentajes[1].toFixed(2)%> + " %";
+    document.getElementById("porcentajeCarton").innerHTML = <%- porcentajes[2].toFixed(2)%> + " %";
+    let maxPaginas = Math.ceil(<%-max%>/3);
+
+    document.getElementById("numeracionPaginas").innerHTML = "Página 1 de"+maxPaginas;
+    cargarHistorial(<%-JSON.stringify(registros_reciclaje)%>,paginaHistorial);
+
+    document.getElementById("imgAtras").addEventListener("click", function(){
+        paginaHistorial--;
+        if(paginaHistorial<=0) paginaHistorial=1;
+        cargarHistorial(<%-JSON.stringify(registros_reciclaje)%>,paginaHistorial);
+        document.getElementById("numeracionPaginas").innerHTML = "Página "+ paginaHistorial+ " de"+maxPaginas;
+
+    });
+
+    document.getElementById("imgAdelante").addEventListener("click", function(){
+        paginaHistorial++;
+        if(paginaHistorial>maxPaginas) paginaHistorial=maxPaginas;
+        cargarHistorial(<%-JSON.stringify(registros_reciclaje)%>,paginaHistorial);
+        document.getElementById("numeracionPaginas").innerHTML = "Página "+ paginaHistorial+ " de"+maxPaginas;
+
+    });
+
+    });
+    </script>
 </html>
 
 

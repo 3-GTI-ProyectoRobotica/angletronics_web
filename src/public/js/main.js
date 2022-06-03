@@ -98,13 +98,4 @@ document.addEventListener('DOMContentLoaded', event => {
             console.error(error)
         })
     }
-
-
-
-
-
-
-
-    
-    
 });
