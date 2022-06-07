@@ -21,21 +21,19 @@ module.exports = class registro_reciclaje {
         })
     }
 
-    static GetRegistrosByUserId(id){ 
-        db.QueryStatment("Select * from registros_reciclaje where id_usuario = '"+id+"';", function(error,result){
+    static GetRegistrosByUserId(id,done){ 
+        db.QueryStatment("Select * from registros_reciclaje where id_usuario = '"+id+" order by id DESC';", function(error,result){
             if(error){
                 console.log(error)
             }else{
                 if(result.lenght == 0){
                     return done(null, null)
                 }else{
-                    /*
-                    lista_registros = []
-                    for
-                    return done(null, new usuario(result.id_usuario, result.mail, result.password))
+                    var registros_reciclaje = []
 
-                    */
-                    console.log(result)
+                    result.forEach(element => 
+                        registros_reciclaje.push(new registro_reciclaje(element.id_registro_reciclaje,element.imagen,element.clasificacion,element.id_usuario,element.fecha)));
+                    return done(null,registros_reciclaje);
                 }
             }
         })
