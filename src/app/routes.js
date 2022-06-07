@@ -1,3 +1,8 @@
+/**
+ * @author: Juan Carlos Hernandez 
+ * @fecha: 06/2022
+ * @description: Este fichero controla los gets que se realizan al servidor mediante rutas
+ */
 const registro_reciclaje = require('./models/registro_reciclaje')
 
 module.exports = (app, passport) => {

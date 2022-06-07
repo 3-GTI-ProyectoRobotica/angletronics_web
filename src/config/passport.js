@@ -1,3 +1,8 @@
+/**
+ * @author: Juan Carlos Hernandez
+ * @fecha: 06/2022
+ * @description: Este fichero controla la libreria passport para la logica del login
+ */
 const Localstrategy = require('passport-local').Strategy
 const User=require('../app/models/usuario');
 

@@ -1,3 +1,8 @@
+/**
+ * @author: Juan Carlos Hernández
+ * @fecha: 06/2022
+ * @description: Este fichero controla el modelo usuario que se guarda en la base de datos sql
+ */
 const bcrypt = require('bcrypt-nodejs')
 const res = require('express/lib/response')
 const db = require('../controller/database')

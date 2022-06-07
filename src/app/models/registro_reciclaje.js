@@ -1,3 +1,8 @@
+/**
+ * @author: Sergi Sirvent Sempere
+ * @fecha: 06/2022
+ * @description: Este fichero controla el modelo registro reciclaje que se guarda en la base de datos sql
+ */
 const res = require('express/lib/response')
 const db = require('../controller/database')
 

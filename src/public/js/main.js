@@ -1,3 +1,8 @@
+/**
+ * @author: Angel Buigues Andrés
+ * @fecha: 04/2022
+ * @description: Este fichero controla la lógica del panel de control
+ */
 document.addEventListener('DOMContentLoaded', event => {
     
     document.getElementById("btn_dis").addEventListener("click", disconnect)

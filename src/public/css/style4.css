@@ -1,3 +1,8 @@
+/**
+ * @author: Alberto Valls Martínez
+ * @fecha: 05/2022
+ * @description: Este fichero controla el css del login
+ */
 .card-body input[type = "text"], input[type = "password"] {
     border: none;
     border-bottom: 1px solid #08b0ce;
