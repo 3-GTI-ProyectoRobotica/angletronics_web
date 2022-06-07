@@ -1,3 +1,8 @@
+/**
+ * @author: Juan Carlos Hernandez
+ * @fecha: 05/2022
+ * @description: Este fichero controla las constantes para la conexión con el servidor
+ */
 const express = require('express')
 const app = express()
 

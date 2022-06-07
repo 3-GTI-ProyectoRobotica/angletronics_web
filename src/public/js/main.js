@@ -1,3 +1,8 @@
+/**
+ * @author: Angel Buigues Andrés
+ * @fecha: 04/2022
+ * @description: Este fichero controla la lógica del panel de control
+ */
 document.addEventListener('DOMContentLoaded', event => {
     
     document.getElementById("btn_dis").addEventListener("click", disconnect)
@@ -20,8 +25,7 @@ document.addEventListener('DOMContentLoaded', event => {
         call_service("parar")
     })
     
-    
-    //document.getElementById("img_ultimo_reciclaje").src="assets/fotos_reciclaje/test16_05_2022_16:46:18.jpg";
+    console.log("Nombre:"+document.getElementById("img_ultimo_reciclaje").src)
 
     data = {
         // ros connection
@@ -97,16 +101,6 @@ document.addEventListener('DOMContentLoaded', event => {
         }, (error) => {
             data.service_busy = false
             console.error(error)
-        })	
-
+        })
     }
-
-
-
-
-
-
-
-    
-    
 });

@@ -1,0 +1,198 @@
+/**
+ * @author: Alberto Valls Martínez
+ * @fecha: 05/2022
+ * @description: Este fichero controla el css de la pagina de historial de reciclaje
+ */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../assets/fotosHistorial/fondoHistorial2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    background-attachment: fixed;
+    background-position:left;
+    
+    font-family: Arial;
+}
+
+#myChart{
+    width: 670px !important;
+    height: 289px !important;
+    margin-left: -170px;
+}
+
+
+
+.loginbox {
+    width: 1120px;
+    border: 1px solid #08b0ce;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 0px;
+    text-align: center;
+    
+    border-radius: 10px;
+    
+    
+}
+
+#titulo {
+    width:100%;
+    height:60px;
+    color: #fff;
+    border-bottom:5px solid;
+    border-bottom-color: #5c636a;  
+}
+
+  .avatar {
+    width: 75px;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 0%;
+    float: left;
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: -10px;
+    top: 1%;
+    left: calc(50% - 50px);
+}
+
+.column-left {
+    float: left;
+    width: 33.333%;
+    margin-top: 45px;
+  }
+  
+  .column-right {
+    float: right;
+    width: 33.333%;
+    margin-top: 45px;
+  }
+  
+  .column-center {
+    display: inline-block;
+    width: 33.333%;
+    margin-top: 45px;
+  }
+
+  #container {
+    width:100%;
+    height:380px;
+    
+    border-bottom:5px solid;
+    border-bottom-color: #5c636a;  
+}
+
+.columnas{
+    height: 90px;
+   
+    border-bottom:1px solid;
+    border-bottom-color: #d1d3d4;
+}
+.columna {
+    float: left;
+    width: 25%;
+    margin-top: 40px;
+  }
+  /* Stops the float property from affecting content after the columns */
+  .columnas:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #amarillo{
+      width: 40px;
+      height: 40px;
+      margin-top: 18px;
+  }
+
+  #verde{
+    width: 40px;
+    height: 40px;
+    margin-top: 18px;
+}
+#azul{
+    width: 40px;
+    height: 40px;
+    margin-top: 18px;
+}
+
+#azul2{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: 15px;
+}
+#amarillo2{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: 10px;
+}
+#verde2{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.h4{
+    padding-bottom: 20px;
+}
+
+#camara{
+    width: 45px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.post-container {
+    margin: 0px 0px 0 0;  
+    
+    overflow: auto
+}
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+    display: block
+}
+.post-content {
+    margin-left: 10px
+}
+
+#grafica_tarta {
+    /* (A1) CIRCLE */
+    width: 500px; 
+    height: 500px;
+    background-color: aqua;
+}
+
+h4{
+    padding-top: 25px;
+    
+}
+
+#camara {
+    margin-top: 25px;
+}
+
+.paginas{
+    margin-top: 15px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.pasar{
+    cursor: pointer;
+}

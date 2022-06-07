@@ -1,11 +1,8 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.4 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+/**
+ * @author: Angel Buigues Andres
+ * @fecha: 04/2022
+ * @description: Fichero que controla la logica de la nav bar del index
+ */
 
 window.addEventListener('DOMContentLoaded', event => {
 
